@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 // setto il server
 const http = require("http");
@@ -9,6 +9,7 @@ const host = process.env.HOST || 'localhost';
 
 // Creo effettivamente il server 
 const server = http.createServer((req, res) => {
+
     console.log(`${req.method} | ${req.url} effettuata`);
 
     let html;

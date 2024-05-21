@@ -1,5 +1,7 @@
 {
-  "name": "node-hello-world",
+  "name": "node-live-1",
+  "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon server.js"
