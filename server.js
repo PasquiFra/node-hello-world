@@ -18,14 +18,45 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    let html;
+    const sentences = [
+        "Il successo è la somma di piccoli sforzi, ripetuti giorno dopo giorno.",
+        "Non aspettare il momento giusto per fare le cose, l'unico momento giusto è adesso.",
+        "Il futuro appartiene a coloro che credono nella bellezza dei propri sogni.",
+        "Non è mai troppo tardi per essere ciò che avresti potuto essere.",
+        "La strada verso il successo è sempre in costruzione.",
+        "Le sfide sono ciò che rende la vita interessante e superarle è ciò che la rende significativa.",
+        "La motivazione ti fa iniziare. L'abitudine ti fa continuare.",
+        "Credi di poterlo fare e sarai già a metà strada.",
+        "Non importa quanto lentamente vai, finché non ti fermi.",
+        "Il modo migliore per predire il futuro è crearlo.",
+        "Il segreto per andare avanti è iniziare.",
+        "Non sognare la tua vita, vivi il tuo sogno.",
+        "La perseveranza è il duro lavoro che fai dopo che ti sei stancato del duro lavoro che hai fatto.",
+        "Ogni giorno è una nuova opportunità per cambiare la tua vita.",
+        "Sii il cambiamento che vuoi vedere nel mondo."
+    ];
 
-    html = `<h1> ${process.env.GREETING} </h1>`;
+    function getRandomIndex() {
+        return randomIndex = Math.floor(Math.random() * sentences.length);
+    }
+
+    let html;
+    let sentence = sentences[getRandomIndex()];
+
+    html = `
+        <head>
+            <meta charset="utf-8">
+        </head>
+
+        <h1> ${process.env.GREETING} </h1>
+        <div><strong>${sentence}</strong></div>        
+    `;
+
 
     res.end(html);
 })
 
 // restituisco un feedback all'avvio del server
 server.listen(port, host, () => {
-    console.log(`Server avviato su http:/${host}:${port}`);
+    console.log(`Server avviato su http://${host}:${port}`);
 })
