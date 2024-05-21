@@ -12,6 +12,12 @@ const server = http.createServer((req, res) => {
 
     console.log(`${req.method} | ${req.url} effettuata`);
 
+    if (req.url === '/favicon.ico') {
+        res.writeHead(404);
+        res.end();
+        return;
+    }
+
     let html;
 
     html = `<h1> ${process.env.GREETING} </h1>`;
