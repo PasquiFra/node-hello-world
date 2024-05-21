@@ -1,4 +1,12 @@
 {
+  "name": "node-hello-world",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.0"
