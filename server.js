@@ -1,3 +1,21 @@
+const sentences = [
+    "Il successo è la somma di piccoli sforzi, ripetuti giorno dopo giorno.",
+    "Non aspettare il momento giusto per fare le cose, l'unico momento giusto è adesso.",
+    "Il futuro appartiene a coloro che credono nella bellezza dei propri sogni.",
+    "Non è mai troppo tardi per essere ciò che avresti potuto essere.",
+    "La strada verso il successo è sempre in costruzione.",
+    "Le sfide sono ciò che rende la vita interessante e superarle è ciò che la rende significativa.",
+    "La motivazione ti fa iniziare. L'abitudine ti fa continuare.",
+    "Credi di poterlo fare e sarai già a metà strada.",
+    "Non importa quanto lentamente vai, finché non ti fermi.",
+    "Il modo migliore per predire il futuro è crearlo.",
+    "Il segreto per andare avanti è iniziare.",
+    "Non sognare la tua vita, vivi il tuo sogno.",
+    "La perseveranza è il duro lavoro che fai dopo che ti sei stancato del duro lavoro che hai fatto.",
+    "Ogni giorno è una nuova opportunità per cambiare la tua vita.",
+    "Sii il cambiamento che vuoi vedere nel mondo."
+];
+
 require("dotenv").config();
 
 // setto il server
@@ -17,24 +35,6 @@ const server = http.createServer((req, res) => {
         res.end();
         return;
     }
-
-    const sentences = [
-        "Il successo è la somma di piccoli sforzi, ripetuti giorno dopo giorno.",
-        "Non aspettare il momento giusto per fare le cose, l'unico momento giusto è adesso.",
-        "Il futuro appartiene a coloro che credono nella bellezza dei propri sogni.",
-        "Non è mai troppo tardi per essere ciò che avresti potuto essere.",
-        "La strada verso il successo è sempre in costruzione.",
-        "Le sfide sono ciò che rende la vita interessante e superarle è ciò che la rende significativa.",
-        "La motivazione ti fa iniziare. L'abitudine ti fa continuare.",
-        "Credi di poterlo fare e sarai già a metà strada.",
-        "Non importa quanto lentamente vai, finché non ti fermi.",
-        "Il modo migliore per predire il futuro è crearlo.",
-        "Il segreto per andare avanti è iniziare.",
-        "Non sognare la tua vita, vivi il tuo sogno.",
-        "La perseveranza è il duro lavoro che fai dopo che ti sei stancato del duro lavoro che hai fatto.",
-        "Ogni giorno è una nuova opportunità per cambiare la tua vita.",
-        "Sii il cambiamento che vuoi vedere nel mondo."
-    ];
 
     function getRandomIndex() {
         return randomIndex = Math.floor(Math.random() * sentences.length);
